@@ -36,8 +36,7 @@ namespace ProductApps
                 totalPaymentTextBlock.Text = Convert.ToString(cProduct.TotalPayment);
                 cProduct.TotalPayment = cProduct.TotalPayment + 25; 
                 totalChargeTextBlock.Text = Convert.ToString(cProduct.TotalPayment);
-                if (wrappingCheckBox.IsChecked == true)
-                    cProduct.TotalPayment = cProduct.TotalPayment + 5;
+                cProduct.TotalPayment = cProduct.TotalPayment + (5*Convert.ToInt16(quantityTextBox.Text));
                 wrappingChargeTextBlock.Text = Convert.ToString(cProduct.TotalPayment);
             }
             catch (FormatException)
